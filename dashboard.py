@@ -68,7 +68,7 @@ for column in datetime_columns:
 min_date = all_df["order_purchase_timestamp_x"].min()
 max_date = all_df["order_purchase_timestamp_x"].max()
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 with st.sidebar:
   # Menambahkan logo
