@@ -106,6 +106,19 @@ with col2:
   total_revenue = format_currency(daily_df.revenue.sum(), "AUD ", locale='es_CO')
   st.metric("Total Revenue", value=total_revenue)
 
+fig, ax = plt.subplots(figsize=(12, 6))
+ax.plot(
+    daily_df["order_purchase_timestamp_x"],
+    daily_df["product_count"],
+    marker='o',
+    linewidth=2,
+    color="#4169E1"
+)
+ax.tick_params(axis='y', labelsize=15)
+ax.tick_params(axis='x', labelsize=15)
+
+st.pyplot(fig)
+
 st.subheader("Customer Demographics")
 
 col1, col2 = st.columns(2)
@@ -122,7 +135,7 @@ with col1:
       ax=ax
   )
 
-  ax.set_title("City", loc="center", fontsize=50)
+  ax.set_title("City", loc="center", fontsize=35)
   ax.set_ylabel(None)
   ax.set_xlabel(None)
   ax.tick_params(axis='x', labelsize=35)
@@ -142,7 +155,7 @@ with col2:
     ax=ax
   )
 
-  ax.set_title("State", loc="center", fontsize=50)
+  ax.set_title("State", loc="center", fontsize=35)
   ax.set_ylabel(None)
   ax.set_xlabel(None)
   ax.tick_params(axis='x', labelsize=35)
@@ -196,23 +209,23 @@ colors = ["#000080", "#6495ED", "#6495ED", "#6495ED", "#6495ED"]
 sns.barplot(y="recency", x="customer_id_x", data=rfm_df.sort_values(by="recency", ascending=True).head(5), palette=colors, ax=ax[0])
 ax[0].set_ylabel(None)
 ax[0].set_xlabel("customer_id", fontsize=30)
-ax[0].set_title("By Recency (days)", loc="center", fontsize=50)
+ax[0].set_title("By Recency (days)", loc="center", fontsize=35)
 ax[0].tick_params(axis='y', labelsize=30)
 ax[0].tick_params(axis='x', labelsize=35)
 
 sns.barplot(y="frequency", x="customer_id_x", data=rfm_df.sort_values(by="frequency", ascending=False).head(5), palette=colors, ax=ax[1])
 ax[1].set_ylabel(None)
 ax[1].set_xlabel("customer_id", fontsize=30)
-ax[1].set_title("By Frequency", loc="center", fontsize=50)
+ax[1].set_title("By Frequency", loc="center", fontsize=35)
 ax[1].tick_params(axis='y', labelsize=30)
 ax[1].tick_params(axis='x', labelsize=35)
 
 sns.barplot(y="monetary", x="customer_id_x", data=rfm_df.sort_values(by="monetary", ascending=False).head(5), palette=colors, ax=ax[2])
 ax[2].set_ylabel(None)
 ax[2].set_xlabel("customer_id", fontsize=30)
-ax[2].set_title("By Monetary", loc="center", fontsize=50)
+ax[2].set_title("By Monetary", loc="center", fontsize=35)
 ax[2].tick_params(axis='y', labelsize=30)
 ax[2].tick_params(axis='x', labelsize=35)
 st.pyplot(fig)
 
-st.caption("Copyright (c) Dicoding 2023", unsafe_allow_html=True)
+st.caption("Copyright (c) Dicoding 2023")
