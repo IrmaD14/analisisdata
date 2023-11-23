@@ -71,7 +71,8 @@ max_date = all_df["order_purchase_timestamp_x"].max()
 st.set_page_config(
   layout="wide", 
   initial_sidebar_state="expanded",
-  page_title="Try Dashboard"
+  page_title="Try Dashboard",
+  page_icon="📊"
 )
 
 with st.sidebar:
@@ -81,6 +82,9 @@ with st.sidebar:
   # Mengambil start_date & end_date dari date_input
   start_date = pd.Timestamp(st.sidebar.date_input("Start date", all_df["order_purchase_timestamp_x"].min().date()))
   end_date = pd.Timestamp(st.sidebar.date_input("End date", all_df["order_purchase_timestamp_x"].max().date()))
+
+  st.link_button("Go to Website", "https://www.dicoding.com/")
+  
 
 main_df = all_df[(all_df["order_purchase_timestamp_x"] >= str(start_date)) &
                  (all_df["order_purchase_timestamp_x"] <= str(end_date))]
