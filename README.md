@@ -2,9 +2,10 @@
 
 ## Setup Environment
 
-conda create --name main-ds python=3.9
-conda activate main-ds
-pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
+<br> conda create --name main-ds python=3.9 </br>
+<br> conda activate main-ds </br>
+<br> pip install --upgrade pip </b>
+<br> pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel </br>
 
 ## Menjalankan streamlit app
 
