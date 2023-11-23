@@ -13,6 +13,6 @@ pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
 streamlit run dashboard.py
 ```
 ## Streamlit Cloud
-```
-https://irmad14-analisisdata-dashboard-lyem8i.streamlit.app/
-```
+
+See https://irmad14-analisisdata-dashboard-lyem8i.streamlit.app/
+
