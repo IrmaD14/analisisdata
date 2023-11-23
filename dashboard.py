@@ -68,6 +68,8 @@ for column in datetime_columns:
 min_date = all_df["order_purchase_timestamp_x"].min()
 max_date = all_df["order_purchase_timestamp_x"].max()
 
+st.set_page_config(layout="wide")
+
 with st.sidebar:
   # Menambahkan logo
   st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png")
@@ -90,7 +92,7 @@ rfm_df = create_rfm_df(main_df)
 #Melengkapi dashboard dengan visualisasi data
 
 st.snow()
-st.header(':sparkles: :sparkles: Dicoding Collection Dashboard :sparkles: :sparkles:', divider='gray')
+st.header('Dicoding Collection Dashboard :sparkles:', divider='gray')
 
 st.subheader('Daily Orders')
 
