@@ -98,7 +98,7 @@ rfm_df = create_rfm_df(main_df)
 #Melengkapi dashboard dengan visualisasi data
 
 st.snow()
-st.header('Dicoding Collection Dashboard :hibiscus: :cherry_blossom:', divider='gray')
+st.header('Dicoding Collection Dashboard :stars:', divider='gray')
 
 st.subheader('Daily Orders')
 
