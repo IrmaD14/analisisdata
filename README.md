@@ -16,6 +16,6 @@ streamlit run dashboard.py
 
 See https://irmad14-analisisdata-dashboard-lyem8i.streamlit.app/
 
-img="![2](https://github.com/IrmaD14/analisisdata/assets/149849696/229b0101-b7f7-45c3-b8ed-a2184bf69137)"
+![2](https://github.com/IrmaD14/analisisdata/assets/149849696/229b0101-b7f7-45c3-b8ed-a2184bf69137)
 
 
