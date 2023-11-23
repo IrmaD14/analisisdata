@@ -15,4 +15,6 @@ streamlit run dashboard.py
 ## Streamlit Cloud
 
 See https://irmad14-analisisdata-dashboard-lyem8i.streamlit.app/
+img="![image](https://github.com/IrmaD14/analisisdata/assets/149849696/0be0e9e2-8d2b-4b11-b43a-035905cf6c75)"
+
 
