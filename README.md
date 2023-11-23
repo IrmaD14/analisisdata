@@ -1,12 +1,18 @@
 # Dicoding Collection Dashboard ✨
 
 ## Setup Environment
-
-<br> conda create --name main-ds python=3.9 </br>
-<br> conda activate main-ds </br>
-<br> pip install --upgrade pip </b>
-<br> pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel </br>
+'''
+conda create --name main-ds python=3.9
+conda activate main-ds
+pip install --upgrade pip
+pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
+'''
 
 ## Menjalankan streamlit app
-
+'''
 streamlit run dashboard.py
+'''
+## Streamlit Cloud
+'''
+https://irmad14-analisisdata-dashboard-lyem8i.streamlit.app/
+'''
