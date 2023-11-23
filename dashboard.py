@@ -6,6 +6,12 @@ from babel.numbers import format_currency
 
 sns.set(style='darkgrid')
 
+[theme]
+base="dark"
+primaryColor="#f39d1f"
+backgroundColor="#023e8a"
+secondaryBackgroundColor="#03045e"
+
 def create_daily_df(df):
   daily_df = df.resample(rule='D', on='order_purchase_timestamp_x').agg({
       "product_id_x": "nunique",
