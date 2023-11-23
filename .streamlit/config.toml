@@ -1,5 +1,4 @@
 [theme]
-base="dark"
-backgroundColor="#151c77"
+base="light"
 textColor = '#ffffff'
 font = "sans serif"
