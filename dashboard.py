@@ -68,7 +68,11 @@ for column in datetime_columns:
 min_date = all_df["order_purchase_timestamp_x"].min()
 max_date = all_df["order_purchase_timestamp_x"].max()
 
-st.set_page_config(layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(
+  layout="wide", 
+  initial_sidebar_state="expanded",
+  page_title="Try Dashboard"
+)
 
 with st.sidebar:
   # Menambahkan logo
@@ -106,7 +110,7 @@ with col2:
   total_revenue = format_currency(daily_df.revenue.sum(), "AUD ", locale='es_CO')
   st.metric("Total Revenue", value=total_revenue)
 
-fig, ax = plt.subplots(figsize=(12, 6))
+fig, ax = plt.subplots(figsize=(15, 6))
 ax.plot(
     daily_df["order_purchase_timestamp_x"],
     daily_df["product_count"],
@@ -228,4 +232,4 @@ ax[2].tick_params(axis='y', labelsize=30)
 ax[2].tick_params(axis='x', labelsize=35)
 st.pyplot(fig)
 
-st.caption("Copyright (c) Dicoding 2023")
+st.caption("Copyright(c) Dicoding 2023")
